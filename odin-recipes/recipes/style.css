@@ -1,0 +1,350 @@
+*,
+*:before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: 2rem auto;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  line-height: 20px;
+}
+.header h1,
+.header .rating {
+  flex: 1 1 100%;
+}
+.header .img {
+  flex: 0 0 40%;
+  order: 1;
+}
+
+.header .img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.bread-crumb {
+  display: inline-flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.prep {
+  margin-top: 2rem;
+}
+
+.prep-card {
+  display: grid;
+  width: 400px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  border: 2px solid rgba(128, 128, 128, 0.075);
+  padding: 20px;
+  border-top: 2px solid black;
+}
+
+.prep-card .bold {
+  font-weight: bold;
+}
+
+.ingredients {
+  line-height: 20px;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredients ul {
+  list-style: none;
+  padding-left: 0;
+ 
+
+}
+
+.ingredients li {
+  margin-top: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.ingredients li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: burlywood;
+  line-height: 20px;
+}
+
+.directions {
+  margin: 40px 0;
+}
+
+.direction-step {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.direction-step h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.direction-step p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.step-img {
+  margin-top: 15px;
+}
+
+.step-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.nutrition {
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.nutrition h2 {
+  margin-bottom: 20px;
+}
+
+.nutrition-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.toggle-nutrition {
+  background: none;
+  padding: 10px 20px;
+  color: rgb(7, 7, 7);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.toggle-nutrition:hover {
+  text-decoration-line: underline;
+}
+
+.nutrition-full {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.nutrition-full h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  border-bottom: 10px solid #333;
+  padding-bottom: 5px;
+}
+
+.servings {
+  margin: 10px 0;
+}
+
+.calories-line {
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 5px solid #333;
+  margin-bottom: 10px;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.nutrition-table th {
+  font-weight: bold;
+  text-align: right;
+}
+
+.nutrition-table th:first-child {
+  text-align: left;
+}
+
+.nutrition-table td:last-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+.nutrition-table .indent td:first-child {
+  padding-left: 30px;
+}
+
+.nutrition-notes {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.nutrition-notes p {
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0 15px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header .img {
+    flex: 1 1 100%;
+    order: 2;
+    margin-top: 15px;
+  }
+
+  .prep-card {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .step-img img {
+    max-width: 100%;
+  }
+
+  .nutrition-full h3 {
+    font-size: 22px;
+  }
+
+  .nutrition-table {
+    font-size: 14px;
+  }
+
+  .nutrition-table th,
+  .nutrition-table td {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .bread-crumb {
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .prep-card {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .ingredients,
+  .directions {
+    margin: 20px 0;
+  }
+
+  .ingredients li {
+    font-size: 14px;
+  }
+
+  .direction-step h3 {
+    font-size: 18px;
+  }
+
+  .direction-step p {
+    font-size: 14px;
+  }
+
+  .nutrition {
+    padding: 15px;
+  }
+
+  .nutrition h2 {
+    font-size: 20px;
+  }
+
+  .nutrition-full {
+    padding: 15px;
+  }
+
+  .nutrition-full h3 {
+    font-size: 20px;
+    border-bottom: 5px solid #333;
+  }
+
+  .nutrition-table {
+    font-size: 12px;
+  }
+
+  .nutrition-table th,
+  .nutrition-table td {
+    padding: 4px;
+  }
+
+  .nutrition-notes {
+    font-size: 11px;
+  }
+
+  .toggle-nutrition {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .prep-card {
+    padding: 10px;
+    gap: 10px;
+    font-size: 13px;
+  }
+}
