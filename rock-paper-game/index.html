@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="selections">
+        <button class="selection" data-selection="rock">👊</button>
+        <button class="selection" data-selection="paper">✋</button>
+        <button class="selection" data-selection="scissors">✌️</button>
+      </div>
+      <div class="results">
+        <div class="player">
+          you <span class="result" data-selection-playerScore>0</span>
+        </div>
+
+        <div class="board"></div>
+
+        <div class="computer">
+          computer <span class="result" data-selection-computerScore>0</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
