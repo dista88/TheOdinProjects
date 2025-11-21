@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Orbitron", monospace;
 }
 
 body {
-    font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -39,6 +41,9 @@ body {
     text-align: right;
     word-wrap: break-word;
     word-break: break-all;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+
 }
 
 #output {
@@ -92,8 +97,6 @@ body {
 
 
 .btn[data-action="clear"],
-.btn[data-action="modulus"],
-.btn[data-action="sign-change"],
 .btn[data-action="backspace"] {
     background-color: #e53e3e;
 }
